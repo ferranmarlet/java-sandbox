@@ -4,17 +4,23 @@ Simple container that I use to run small java projects.
 To generate the image for the first time, run:
 
 ```
-docker-compose up --build
+make build
 ```
 
 Once it's generated, to get the container up and running you only need to do:
 
 ```
-docker-compose up
+make up
 ```
 
 To log into the running container, run:
 
 ```
-docker exec -it java-sandbox bash
+make sh
+```
+
+To run the test suite inside the container:
+
+```
+make test
 ```
