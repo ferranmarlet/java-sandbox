@@ -24,3 +24,15 @@ To run the test suite inside the container:
 ```
 make test
 ```
+
+To run a single test class:
+
+```
+make tests target="ClassName"
+```
+
+To run a single test method:
+
+```
+make tests target="ClassName#MethodName"
+```

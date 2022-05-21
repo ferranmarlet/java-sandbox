@@ -53,6 +53,6 @@ sh: ## Log into container
 status: ## Show container status
 	docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Networks}}\t{{.State}}\t{{.CreatedAt}}"
 
-.PHONY: test
+.PHONY: tests
 tests: ## Run test suite inside the container
-	docker exec java-sandbox ./mvnw test
+	docker exec java-sandbox ./mvnw test -Dtest="$(target)"
